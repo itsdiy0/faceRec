@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+:root{
+	--lightBlue : #1b89a2;
+	--light:#99e2f1;
+	--darkBlue : #146578;
+	--red : #ED4C67;
+	--darkRed : #b3394d;
+	--green : #009432;
+	--darkGreen : #016322;
+}
+body{
+    background-image: url('../images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Heebo !important;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+input,a,li,h1,h2,h3,h4,h5,h6{
+	font-family: Heebo !important;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style-type: none;
+}
+ul{
+	padding-inline: 0;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+
+}
+section.loginSection{
+	padding: 20px;
+	border-radius: 10px;
+	width: 25%;
+	background: rgba(0,0,0,0.45);
+	border:2px solid var(--light);
+	position: fixed;
+    right: 10%;
+    top: 20%;
+    text-align: center;
+}	
+section.loginSection input[type=text],section.loginSection input[type=password]{
+	width: 100%;
+	margin: 10px auto;
+	padding: 10px 5px;
+	border-radius: 5px;
+	border:0px solid;	
+	font-size: 1.3rem;
+	background: #eee;
+}
+section.loginSection input[type=submit]{
+	width: 100%	;
+	padding: 5px;
+	font-size: 1.3rem;
+    text-align: center;
+	font-weight: bold;
+    margin: 10px 5px;
+    border: 0px solid #000;
+    border-radius: 5px;
+    background: var(--red);
+    color: #eee;
+    cursor: pointer;
+
+}
+section.loginSection>h2{
+	font-size: 2rem;
+	font-weight: bold;
+	color: #eee;
+	margin: 0;
+}
+section.loginSection>h4{
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #eee;
+	margin: 5px 0 20px 0;
+}
+
+section.loginSection input[type=submit]:hover,section.loginSection input[type=submit]:focus{
+	background: var(--darkRed);
+}
+nav.mainMenu{
+	padding: 20px;
+	border-radius: 10px;
+	width: 20%;
+	background: rgba(0,0,0,0.45);
+	border:2px solid var(--light);
+	position: fixed;
+    left: 6%;
+    top: 20%;
+    text-align: center;
+}
+nav.mainMenu>ul>li>a{
+   background:var(--lightBlue);
+   width: 100%;
+   margin: 20px auto;
+   display: block;
+   border-radius: 5px;
+   color: #eee;
+   font-size: 2rem;
+   font-weight: bold;
+}
+nav.mainMenu>ul>li>a:hover,nav.mainMenu>ul>li>a:focus{
+	background: var(--darkBlue);
+}
+nav.mainMenu>ul>li>a.logoutBtn{
+	background-color: var(--red) !important;
+}
+nav.mainMenu>ul>li>a.logoutBtn:hover,nav.mainMenu>ul>li>a.logoutBtn:focus{
+	background-color: var(--darkRed) !important;
+}
+section.profileSection{
+	padding: 20px;
+	border-radius: 10px;
+	width: 25%;
+	background: rgba(0,0,0,0.7);
+	border:2px solid var(--light);
+	text-align: center;
+	position: fixed;
+    right: 6%;
+    top: 20%;
+    
+}
+section.profileSection>ul>li>img{
+	width: 50%;
+	height: auto;
+}
+section.profileSection>ul>li>h3{
+	font-size: 1.5rem;
+	color: #eee;
+}
+section.informationSection{
+	padding: 20px;
+	border-radius: 10px;
+	width: 15%;
+	background: rgba(0,0,0,0.7);
+	border:2px solid var(--light);
+	text-align: center;
+	position: fixed;
+    right: 35%;
+    top: 20%;
+    color: #eee;
+}
+section.informationSection>h3{
+	font-size: 2rem;
+	font-weight: bold;
+}
+section.informationSection>p{
+	font-size: 1.3rem;
+	text-align: left;
+	font-weight: bold;
+}
+section.viewUsersSection{
+	padding: 20px;
+	border-radius: 10px;
+	width: 60%;
+	background: rgba(0,0,0,0.7);
+	border:2px solid var(--light);
+	text-align: center;
+	position: fixed;
+    right: 5%;
+    top: 35%;
+    color: #eee;
+    height: 50%;
+    overflow-y: scroll;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+section.viewUsersSection>h2{
+	margin: 10% auto;
+	font-weight: bold;
+	font-size: 2rem;
+}
+.usersBox{
+	width: 25%;
+	background: var(--lightBlue);
+	padding: 10px;
+	border-radius: 20px;
+	margin: 30px;
+	float: right;
+	height: 280px;
+}
+.usersBox>img{
+	width:85px;
+	height: 120px
+}
+a.removeBtn{
+	background: var(--red);
+	color: #eee;
+	padding: 3px;
+	font-size: 0.9rem;
+	margin: 10px 3px;
+	border-radius: 4px;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+a.removeBtn:hover,a.removeBtn:focus{
+	background: var(--darkRed);
+}
+section.searchBox{
+	padding: 20px;
+	border-radius: 10px;
+	width: 60%;
+	background: rgba(0,0,0,0.7);
+	border:2px solid var(--light);
+	text-align: center;
+	position: fixed;
+    right: 5%;
+    top: 20%;
+    color: #eee;
+}
+section.searchBox input[type=text]{
+	width: 50%;
+    border: 0 solid #eee;
+    background: #eee;
+    padding: 7px;
+	font-size: 1.3rem;
+    border-radius: 5px;
+}
+section.searchBox input[type=submit]{
+	background: var(--red);
+    color: #eee;
+    padding: 7px;
+    border: 0 solid #eee;
+	border-radius: 5px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+section.searchBox input[type=submit]:hover,section.searchBox input[type=submit]:focus{
+	background:var(--darkRed);
+}
+section.addUserSection{
+	padding: 20px;
+	border-radius: 10px;
+	width: 40%;
+	text-align: center;
+	background: rgba(0,0,0,0.7);
+	border:2px solid var(--light);
+	text-align: center;
+	position: fixed;
+    right: 5%;
+    top: 20%;
+    color: #eee;
+}
+section.addUserSection>form>ul>li>input{
+	margin: 10px auto;
+}
+section.addUserSection>form>ul>li>input[type=text],section.addUserSection>form>ul>li>input[type=date]{
+	width:50%;
+	font-size: 1.5rem;
+	border:0px solid #eee;
+	border-radius: 5px;
+	padding:7px;
+	font-weight: bold;
+	background: #eee;
+}
+section.addUserSection>form>ul>li>input[type=file],section.userImage>form>ul>li>input[type=file]{
+	background-color: var(--lightBlue);
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 1.3rem;
+}
+section.addUserSection>form>ul>li>input[type=submit],section.userImage>form>ul>li>input[type=submit]{
+	font-size: 1.5rem;
+	border:0px solid #eee;
+	border-radius: 5px;
+	padding:7px;
+	font-weight: bold;
+	background: var(--green);
+	cursor: pointer;
+	color:#eee;
+	width: 50%;
+}
+section.addUserSection>form>ul>li>input[type=submit]:hover,section.addUserSection>form>ul>li>input[type=submit]:focus,section.userImage>form>ul>li>input[type=submit]:hover,section.userImage>form>ul>li>input[type=submit]:focus{
+	background-color: var(--darkGreen);
+}
+section.addUserSection>form>ul>li>h4{
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin:15px auto;
+
+}
+section.contactAlertBox,section.policeAlertBox{
+	padding: 20px;
+	border-radius: 10px;
+	width: 15%;
+	text-align: left;
+    color: #000;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+section.contactAlertBox{
+	background:rgb(237, 76, 103,0.7);
+	position:fixed;
+	top:20%;
+	right:15%;
+}
+section.policeAlertBox{
+	background:rgb(0, 148, 50,0.7);
+	position: fixed;
+	top: 20%;
+	right:35%;
+}
+.errorMessage{
+	padding: 20px;
+	border-radius: 10px;
+	width: 25%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background:rgb(237, 76, 103,0.7);
+	color:#000;
+	position: fixed;
+    right: 10%;
+    top: 10%;
+    text-align: center;
+}
+.successMessage{
+	padding: 20px;
+	border-radius: 10px;
+	width: 20%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background:rgb(0, 148, 50,0.7);
+	color:#000;
+	position: fixed;
+    left: 6%;
+    top: 10%;
+    text-align: center;
+}
+section.systemImage,section.userImage{
+	padding: 20px;
+	border-radius: 10px;
+	width: 25%;
+	background: rgba(0,0,0,0.45);
+	border:2px solid var(--light);
+	position: fixed;
+    top: 10%;
+    text-align: center;
+}
+img.recognitionPics{
+	width: 300px;
+	height: auto;
+	margin: 10px auto;
+}
+section.userImage{
+    right: 35%;
+}
+section.systemImage{
+	right: 5%;
+}
+section.userImage>form>ul>li>h4{
+	font-size: 1.3rem;
+	color: #eee;
+	font-weight: bold;
+}
+section.userImage>form>ul>li{
+	margin: 10px auto;
+}
+section.systemImage>ul>li{
+	color: #eee;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+a.checkButton{
+	color: #eee;
+	padding: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 1.5rem;
+	background-color: var(--red);
+	display: block;
+}
+a.checkButton:hover,a.checkButton:focus{
+	background-color: var(--darkRed);
+	
+}

@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Facial Recognition | Recognition</title>
+{% endblock %}
+
+{% block body %}
+
+    <nav class="mainMenu">
+	    <ul>
+		    <li><a href="/">Home</a></li>
+		    <li><a href="/recognition">Face Recognition</a></li>
+		    <li><a href="/add_users">Add users</a></li>
+		    <li><a href="/view_users">View users</a></li>
+		    <li><a href="/help">Help desk</a></li>
+		    <li><a href="/logout" class="logoutBtn">Exit</a></li>
+	    </ul>
+    </nav>
+    <section class="userImage">   
+        {% if op is defined %}
+            <img class="recognitionPics" src="{{url_for('static', filename='uploads/check_upload/analyzed.jpg')}}" alt="analyzed">
+        {% elif data is defined %}
+            <img class="recognitionPics" src="{{url_for('static', filename='uploads/check_upload/uploaded.jpg')}}" alt="avatar">
+        {% else %}
+            <img class="recognitionPics" src="{{url_for('static', filename='images/avatar.jpg')}}" alt="uploaded">
+        {% endif %}
+        <form action="{{ url_for('recognition') }}" method="POST" enctype="multipart/form-data" >
+            <ul>
+                <li><h4>Select your image to upload and recognition :</h4></li>
+                <li><input type="file" name="file_name"></li>
+                <li><input type="submit" value="Upload image"></li>
+            </ul>
+        </form>
+    </section>
+
+    <section class="systemImage">
+        {% if op|length == 0 %}
+        <ul>
+            <li><img class="recognitionPics" src="{{url_for('static', filename='/images/avatar.jpg')}}" alt=""></li>
+            <li>Name : - </li>
+            <li>Age : -</li>
+            <li>BOD : - </li>
+        </ul>
+        {% else %}
+        <ul>
+            <li><img class="recognitionPics" src="{{url_for('static', filename='uploads/train/')}}{{ op.img_name }}" alt=""></li>
+            <li>Name : {{op.name}}</li>
+            <li>Confidence : {{op.confidence}}</li>
+            <li>BOD : {{op.BOD}}</li>
+        </ul>
+        {% endif %}
+        <a href="{{ url_for('analyze') }}" class="checkButton">
+            Recognise
+        </a>
+    </section>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Facial Recognition | Help</title>
+{% endblock %}
+
+{% block body %}
+
+<nav class="mainMenu">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/recognition">Face Recognition</a></li>
+		<li><a href="/add_users">Add users</a></li>
+		<li><a href="/view_users">View users</a></li>
+		<li><a href="/help">Help desk</a></li>
+        <li><a href="/logout" class="logoutBtn">Exit</a></li>
+	</ul>
+</nav>
+<section class="policeAlertBox">
+	<h2>Police Contact</h2>
+    <p>
+        The police are 24 hours in service you can contact if you had any doubt on customer.<br>
+        contact no. 999
+    </p>
+</section>
+<section class="contactAlertBox">
+    <h2>IT Department</h2>
+	<p>
+        The IT department is 24 in service. if you had any bug you can directly sent the mail in given mail address.<br>
+        email : facerec@gmail.com
+    </p>
+</section>
+{% endblock %}

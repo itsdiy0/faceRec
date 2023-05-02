@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Facial Recognition | Home</title>
+{% endblock %}
+
+{% block body %}
+
+<nav class="mainMenu">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/recognition">Face Recognition</a></li>
+		<li><a href="/add_users">Add users</a></li>
+		<li><a href="/view_users">View users</a></li>
+		<li><a href="/help">Help desk</a></li>
+		<li><a href="/logout" class="logoutBtn">Exit</a></li>
+	</ul>
+</nav>
+<section class="profileSection">
+	<ul>
+		<li><img src="{{url_for('static', filename='/images/avatar.jpg')}}"></li>
+		<li><h3>Name : John Smith</h3></li>
+		<li><h3>DOB : 26-10-2000</h3></li>
+	</ul>
+	<div class="banTime">
+		
+	</div>
+</section>
+<section class="informationSection">
+	<h3>Information</h3>
+	<p>
+		This system software can helps in security system.it helps in the detection of the people so that their detail can be saved .
+	</p>
+</section>
+{% endblock %}

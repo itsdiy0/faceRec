@@ -1,0 +1,22 @@
+
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Facial Recognition | Login</title>
+{% endblock %}
+{% block body %}
+	{% for message in get_flashed_messages() %}
+		<div class="errorMessage">
+        	{{ message }}
+		</div>
+    {% endfor %}
+	<section class="loginSection">
+		<h2>Facial Recognition System</h2>
+		<h4>System for the security</h4>
+		<form method="POST">
+			<input type="text" placeholder="Your username ..." name="userName">
+			<input type="password" placeholder="Your password ..." name="passWord">
+			<input type="submit" name="" value="Sign in">
+		</form>
+	</section>
+{% endblock %}
