@@ -1,3 +1,5 @@
+import sqlite3,os 
+
 def remove_empty_trains():
     root = "static/uploads/train"
     folders = list(os.walk(root))[1:]

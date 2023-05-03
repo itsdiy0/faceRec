@@ -1,5 +1,5 @@
 from flask import Flask,render_template, request, url_for, flash, redirect,session
-import sqlite3,os
+import os
 from werkzeug.utils import secure_filename
 from OCV.face_rec import recongnize
 from functions import *
@@ -9,8 +9,6 @@ app.config['SECRET_KEY'] = '95275a2e062866afcd099992eb0b09626e29a0e01041fe41'
 app.config['UPLOAD_FOLDER'] = app.static_folder+'/uploads'
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
 app.config['MAX_CONTENT_PATH'] = 1024 * 1024
-
-
 
 # @app.route('/login',methods=('POST','GET'))
 # def login():
